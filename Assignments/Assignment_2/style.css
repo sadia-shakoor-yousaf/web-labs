@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin:0%;
+}
+.free-shipping-container{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    top: 0px;
+}
+.hero-section{
+    margin-top: 40px;
+    border: 2px solid rgb(211, 29, 29);
+    height: 100vh;
+    overflow: hidden;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    margin: 1px;
+    padding: 12px 6px 9px;
+    position: fixed;
+    width: 100%;
+}
+.hero-text{
+    padding: 200px;
+    padding-right: 90px;
+    text-align: right;
+}
+.discount{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 45px;
+    padding-right: 80px;
+    margin-bottom: 30px;
+    transform: rotate(45deg);
+    transform-origin: left top;
+    width: 80px;
+    text-align: center;
+}
+.bestsellers{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 14px 5px;
+    border-bottom: 1px solid black;
+    margin-left: 14px;
+}
+
+.product-container{
+    border: 1px solid burlywood;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product-card{
+    flex: 25%;
+    border: 1px solid bisque;
+    margin: 6px;
+}
