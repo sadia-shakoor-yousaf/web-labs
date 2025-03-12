@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Percival Clothing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <div class="free-shipping-container">
+    <div class="bg-black text-white text-center py-2 fixed-top"">
         Free shipping to Pakistan on all orders above Rs39,050
     </div>
     <div class="discount">
@@ -17,19 +18,22 @@
 
 
     <div class="hero-section">
-        <div class="navbar">
-            <div class="menu">
-                menu
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">PERCIVAL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Icon1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Icon2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Icon3</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="logo">
-                PERCIVAL
-            </div>
-            <div class="icons">
-                <span>icon1</span>
-                <span>icon2</span>
-                <span>icon3</span>
-            </div>
-        </div>
+        </nav>
         <div class="hero-text">
             <span>DECIDES BY YOU</span><H2>Bestsellers</H2><span>SHOP NOW</span>
         </div>
@@ -103,12 +107,13 @@
             <p>price</p>
         </div>
         <div class="product-card">
+            <img src="low_resolution.avif">
             <p>Product 1</p>
             <p>description</p>
             <p>price</p>
         </div>
         <div class="product-card">
-            <img src="">
+            <img src="low_resolution.avif">
             <p>Product 1</p>
             <p>description</p>
             <p>price</p>
@@ -181,7 +186,54 @@
         </div>
     </div>
 
+    <div class="container footer">
+        <div class="row">
+            <div class="col-md-4 bg-white mb-2 p-3 rounded">
+                <h6>Sign up for 15% off your first order</h6>
+                <form>
+                    <input type="email" class="form-control mb-2" placeholder="*EMAIL ADDRESS">
+                    <input type="text" class="form-control mb-2" placeholder="*FIRST NAME">
+                    <input type="text" class="form-control mb-2" placeholder="*LAST NAME">
+                    <button type="submit" class="btn btn-submit w-40 p-2 my-2">SUBMIT →</button>
+                </form>
+            </div>
+            <div class="col-md-8 footer-links">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>OUR INSTAGRAM IS VERY, VERY GOOD →</h5>
+                        <a href="#">REWARDS AND REVIEWS</a><br>
+                        <a href="#">REWARDS | THE MEMBERSHIP</a><br>
+                        <a href="#">EMAIL NEWSLETTER SIGN UP</a><br>
+                        <a href="#">SMS NEWSLETTER SIGN UP</a><br>
+                        <a href="#">T-SHIRT & HOODIE BUNDLE DEAL</a><br>
+                        <a href="#">PERCIVAL REVIEWS</a><br>
+                        <a href="#">PERCIVAL PROMO CODES & OFFERS</a><br>
+                        <a href="#">STUDENT DISCOUNT</a>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>HELP AND INFO</h5>
+                        <a href="#">ABOUT</a><br>
+                        <a href="#">CAREERS - WE'RE HIRING!</a><br>
+                        <a href="#">SOHO STORE | CENTRAL LONDON</a><br>
+                        <a href="#">SPITALFIELDS STORE | EAST LONDON</a><br>
+                        <a href="#">JOURNAL | THE PERCI RAG</a><br>
+                        <a href="#">PERCIVAL PERSONAL STYLING</a><br>
+                        <a href="#">UK SHIPPING & RETURNS</a><br>
+                        <a href="#">INTERNATIONAL SHIPPING & RETURNS</a><br>
+                        <a href="#">SUSTAINABILITY</a><br>
+                        <a href="#">TERMS & CONDITIONS</a><br>
+                        <a href="#">PRIVACY PAGE</a><br>
+                        <a href="#">COOKIE POLICY</a><br>
+                        <a href="#">FAQs</a><br>
+                        <a href="#">SITEMAP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

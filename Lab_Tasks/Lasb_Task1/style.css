@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin:0%;
+}
+
+.hero-section{
+    margin-top: 34px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(DSCF0778_2000x.avif);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1px;
+    padding: 12px 6px 9px;
+    position: fixed;
+    width: 100%;
+}
+body:has(.content:before) .navbar {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.content{
+    height: 200vh;
+}
+.hero-text{
+    padding: 200px;
+    padding-right: 90px;
+    text-align: right;
+}
+.discount{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 45px;
+    padding-right: 80px;
+    margin-bottom: 30px;
+    transform: rotate(45deg);
+    transform-origin: left top;
+    width: 80px;
+    text-align: center;
+}
+.bestsellers{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 14px 5px;
+    border-bottom: 1px solid black;
+    margin-left: 14px;
+}
+
+.product-container{
+    border: 1px solid burlywood;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product-card{
+    flex: 25%;
+    border: 1px solid bisque;
+    margin: 6px;
+    overflow: hidden;
+}
+.product-card img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+.shop-now{
+    text-align: center;
+    color: white;
+    border: none;
+}
+.shop-now button{
+    color: white;
+    background-color: black;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+.INSTAGRAM{
+    align-items: left;
+    margin:20px 3px 5px;
+}
+.insta-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.insta-post{
+    flex: 20%;
+    border: 1px solid aqua;
+}
+.insta-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5);  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.insta-post:hover .overlay {
+    opacity: 1;
+}
+.footer {
+    background: url('download.jpg') repeat;
+    padding: 40px;
+}
+/* .form-control {
+    background: transparent;
+    border: 1px solid white;
+    color: black;
+} */
+.form-control::placeholder {
+    color: rgba(190, 174, 174, 0.7);
+}
+.footer h5{
+    color: white;
+}
+.footer br{
+    color: white;
+}
+.btn-submit {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 2px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
