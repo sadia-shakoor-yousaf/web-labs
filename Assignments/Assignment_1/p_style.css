@@ -4,7 +4,6 @@
 }
 body{
     background-color: #011719;
-    /* background-image: url(background.png); */
     color: white;
     font-family: 'Times New Roman';
 }
@@ -20,7 +19,7 @@ html{
     scroll-behavior: smooth;
 }
 
-/* navigation bar */
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -185,7 +184,7 @@ nav ul li a:hover{
     border-radius: 6px;
     text-decoration: none;
     color:white;
-    /* transition: background 0.5s; */
+
 }
 .btn:hover{
     background-color: #1f939d;
@@ -230,7 +229,7 @@ form input,form textarea{
     font-size: 18px;
 }
 form .btn2{
-    /* padding: 14px; */
+
     margin-top: 20px;
     background: none;
     font-size: 18px;

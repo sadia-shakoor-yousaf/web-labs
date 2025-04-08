@@ -7,9 +7,10 @@
     margin-top: 34px;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    background-image: url(DSCF0778_2000x.avif);
-}
+    overflow: hidden;}
+
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -26,11 +27,7 @@ body:has(.content:before) .navbar {
 .content{
     height: 200vh;
 }
-.hero-text{
-    padding: 200px;
-    padding-right: 90px;
-    text-align: right;
-}
+
 .discount{
     position: fixed;
     bottom: 0px;
@@ -57,23 +54,36 @@ body:has(.content:before) .navbar {
     margin-left: 14px;
 }
 
-.product-container{
-    border: 1px solid burlywood;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.product-card{
-    flex: 25%;
-    border: 1px solid bisque;
-    margin: 6px;
-    overflow: hidden;
-}
+
 .product-card img {
-    width: 100%;
     height: 80vh;
-    object-fit: cover;
+}
+.hover-image{
+    display: none;
+}
+.size-options{
+    opacity: 0;
+    background: rgba(16, 16, 16, 0.459);
+}
+.size-options span {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.product-card:hover .default-image {
+    display: none;
+}
+
+.product-card:hover .hover-image {
+    display: block;
+}
+
+.product-card:hover .size-options {
+    opacity: 1;
 }
 .shop-now{
     text-align: center;
@@ -87,38 +97,13 @@ body:has(.content:before) .navbar {
     padding: 15px;
     border-radius: 5px;
 }
-.INSTAGRAM{
-    align-items: left;
-    margin:20px 3px 5px;
-}
-.insta-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-}
-.insta-post{
-    flex: 20%;
-    border: 1px solid aqua;
-}
-.insta-post img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: rgba(0, 0, 0, 0.5);  */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
+    background: rgba(0, 0, 0, 0.5); 
+    opacity: 0;}
+
+
 .insta-post:hover .overlay {
     opacity: 1;
 }
@@ -126,11 +111,7 @@ body:has(.content:before) .navbar {
     background: url('download.jpg') repeat;
     padding: 40px;
 }
-/* .form-control {
-    background: transparent;
-    border: 1px solid white;
-    color: black;
-} */
+
 .form-control::placeholder {
     color: rgba(190, 174, 174, 0.7);
 }
@@ -149,7 +130,4 @@ body:has(.content:before) .navbar {
 .footer-links a {
     color: white;
     text-decoration: none;
-}
-.footer-links a:hover {
-    text-decoration: underline;
 }
