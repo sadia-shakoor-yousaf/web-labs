@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+body{
+    background-color: #011719;
+    color: white;
+    font-family: 'Times New Roman';
+}
+
+body hr{
+    margin: 73px 84px;
+    border: none;
+    background-color: #1f939d;
+    height: 1.4px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 85px;
+    background-color: #032327;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    list-style: none;
+    margin: 23px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color:#1f939d;
+}
+.left{
+    font-size: 1.4rem;
+}
+
+#Home{
+    display: flex;
+    justify-content: space-around;
+    margin: 150px 0px   ;
+    align-items: center;
+
+}
+
+#Home > div{
+    width: 30%;
+}
+.leftsection{ 
+    width: 40%;
+    font-size: 36px;
+    align-items: center;
+}
+.leftsection span, #job{
+    color: #3197a0;
+}
+
+#about{
+    padding: 80px 0;
+    margin: 0 83px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col1 img{
+    border-radius: 15px;
+    width: 90%;
+}
+.about-col2{
+    flex-basis: 60%;
+}
+ #title{
+    font-size: 30px;
+}
+
+#projects{
+    padding: 30px 0;
+    margin: 0 83px;
+}
+
+#projects h1{
+    font-size: 30px;
+}
+
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projects-list div{
+    padding: 40px;
+    background-color: rgb(6, 65, 63);
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: backgroung 0.5s, transform 0.5s;
+}
+.projects-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.projects-list div:hover{
+    background-color: #3ea7b0;
+    transform: translateX(-10px);
+}
+
+#work{
+    padding: 30px 0;
+    margin: 0 83px;
+}
+#work h1{
+    font-size: 30px;  
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 140px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 20rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    border-radius:10px ;
+    background: linear-gradient(rgba(0,0,0,0.6),#0f7474 );
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 01 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.layer h3{
+    font-size: 24px;
+    font-weight: 500px;
+    margin-bottom: 10px;
+}
+.work:hover img{
+    transform: scale(1.1);
+} 
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #1f939d;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:white;
+
+}
+.btn:hover{
+    background-color: #1f939d;
+}
+
+#contact{
+    padding: 30px 0;
+    margin: 0 83px;
+}
+#contact h1{
+    font-size: 30px;  
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin: 30px 0;
+}
+.contact-left p i{
+    color: #1f939d;
+    margin-right: 14px;
+    font-size: 23px;
+}
+.btn.btn2{
+    display: inline-block;
+}
+.contact-right form{
+    width: 100;
+}
+form input,form textarea{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background:rgb(6, 65, 63);
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+}
+form .btn2{
+
+    margin-top: 20px;
+    background: none;
+    font-size: 18px;
+}
