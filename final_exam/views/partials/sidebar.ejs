@@ -1,0 +1,42 @@
+<div class="sidebar">
+  <% if (isAdmin) { %>
+  <a href="/admin/dashboard" class="sidebar-link"><h2>Admin Dashboard</h2></a>
+  <a href="/admin/orders" class="sidebar-link">All Orders</a>
+  <a href="/admin/products/add" class="sidebar-link">Add Product</a>
+  <a href="/admin/complaints" class="sidebar-link">All Complaints</a>  
+  <a href="/admin/products/list" class="sidebar-link">Manage Products</a>
+  <hr />
+  <% } else { %>
+  <a href="#" class="sidebar-link"><h1>New Arrivals</h1></a>
+  <a href="#" class="sidebar-link"><h2>Bestsellers</h2></a>
+  <a href="#" class="sidebar-link"><h3>Summer Linen Suits</h3></a>
+  <a href="#" class="sidebar-link"><h4>T-Shirts 3 for 2</h4></a>
+  <a href="#" class="sidebar-link"
+    ><strong>Get a 2 piece suit & shirt, save 20%</strong></a
+  >
+
+  <a href="#" class="sidebar-link">Sale</a>
+  <a href="#" class="sidebar-link">Suits & Tailoring</a>
+
+  <a href="#" class="sidebar-link">T Shirts [NEW]</a>
+  <a href="#" class="sidebar-link">Denim Collection [NEW]</a>
+  <a href="#" class="sidebar-link">The Linen Collection</a>
+
+  <a href="#" class="sidebar-link">Shirts</a>
+  <a href="#" class="sidebar-link">Polo Shirts</a>
+  <a href="#" class="sidebar-link">Overshirts</a>
+  <a href="#" class="sidebar-link">Trousers & Shorts</a>
+
+  <a href="#" class="sidebar-link">Footwear</a>
+  <a href="#" class="sidebar-link">Jackets & Coats</a>
+
+  <a href="/my-orders" class="sidebar-link">My Orders</a>
+  <a href="/admin/dashboard" class="sidebar-link"><h4>Admin Dashboard</h4></a>
+  <a href="/my-complaints" class="sidebar-link">My Complaints</a>
+  <a class="nav-link" href="/contact" class="sidebar-link">📨 Contact Us</a>
+
+  <% } %>
+  <a href="/logout" class="sidebar-link">Log out</a>
+</div>
+
+<div class="sidebar-backdrop"></div>

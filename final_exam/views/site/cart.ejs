@@ -1,0 +1,48 @@
+
+<div class="container pt-5 pb-4">
+  <h2>Your Cart</h2>
+
+  <% if (items.length === 0) { %>
+    <p>Your cart is empty.</p>
+  <% } else { %>
+    <form action="/cart/update" method="POST">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% items.forEach((item, index) => { %>
+            <tr>
+              <td><%= item.title %></td>
+              <td>Rs. <%= item.price %></td>
+              <td>
+                <input 
+                  type="number" 
+                  name="quantities[<%= item.id %>]" 
+                  value="<%= item.quantity %>" 
+                  min="1" 
+                  class="form-control" 
+                  style="width: 80px;">
+              </td>
+              <td>Rs. <%= (item.price * item.quantity).toLocaleString() %></td>
+              <td>
+                <a href="/cart/remove/<%= item.id %>" class="btn btn-sm btn-danger">Remove</a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+      <h4>Total: Rs. <%= total.toLocaleString() %></h4>
+
+      <button type="submit" class="btn btn-success mt-3">Update Cart</button>
+      <a href="/checkout" class="btn btn-primary mt-3">Checkout</a>
+    </form>
+  <% } %>
+</div>

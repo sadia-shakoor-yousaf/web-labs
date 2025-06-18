@@ -1,0 +1,22 @@
+<div class="container pt-5 pb-4">
+  <h2>Edit Product</h2>
+  <form method="POST" action="/admin/products/edit/<%= product._id %>">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input name="title" class="form-control" value="<%= product.title %>" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Price</label>
+      <input name="price" type="number" class="form-control" value="<%= product.price %>" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea name="description" class="form-control" rows="3" required><%= product.description %></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Image URL</label>
+      <input name="imageDefault" class="form-control" value="<%= product.imageDefault %>">
+    </div>
+    <button class="btn btn-success">Update Product</button>
+  </form>
+</div>

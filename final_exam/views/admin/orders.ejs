@@ -1,0 +1,26 @@
+
+<div class="container pt-5 pb-4">
+  <h2 class="mb-4">All Orders</h2>
+
+  <% orders.forEach(order => { %>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header bg-light">
+        <strong>Order by:</strong> <%= order.userId.name %> 
+        <span class="badge bg-info text-dark float-end"><%= order.status %></span>
+      </div>
+      <div class="card-body">
+        <% order.items.forEach(item => { %>
+          <div class="d-flex justify-content-between">
+            <div><strong>Product ID:</strong> <%= item.productName %></div>
+            <div><strong>Qty:</strong> <%= item.quantity %></div>
+            <div><strong>Price:</strong> Rs <%= item.price %></div>
+          </div>
+        <% }) %>
+        <div class="mt-3 text-end text-muted">
+          <small><%= new Date(order.createdAt).toLocaleString() %></small>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
