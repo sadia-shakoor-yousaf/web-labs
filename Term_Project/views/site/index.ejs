@@ -1,0 +1,67 @@
+<div class="position-relative w-100 h-50">
+  <img src="/imgs/launch-desktop.webp" alt="" class="w-100 h-50 object-fit-cover">
+  <div class="position-absolute w-100 h-100 top-0 start-0 d-flex align-items-end justify-content-center">
+    <button class="btn btn-outline-light rounded-0 m-4 px-4 py-2 text-uppercase new-lines-btn">
+      NEW LINES ADDED
+    </button>
+  </div>
+</div>
+
+<div class="bestsellers">
+  <h2 class="bestsellers-title">BESTSELLERS</h2>
+  <span class="bestsellers-arrow">→</span>
+</div>
+
+<div class="product-container">
+  <div class="row g-4">
+    <% products.forEach(product => { %>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="product-card position-relative">
+          <div class="product-image-container position-relative overflow-hidden">
+            <img src="<%= product.imageDefault %>" class="default-image object-fit-cover w-100">
+            <img src="<%= product.imageHover %>" class="hover-image">
+            <div class="size-options">
+              <% product.sizes.forEach(size => { %>
+                <span><%= size %></span>
+              <% }) %>
+            </div>
+          </div>
+          <div class="product-details mt-3">
+            <p class="product-title fw-bold mb-1"><%= product.title %></p>
+            <p class="product-collab text-secondary small"><%= product.description %></p>
+            <p class="product-price fw-bold">Rs.<%= product.price.toLocaleString() %></p>
+            <form action="/add-to-cart/<%= product._id %>" method="POST">
+              <button type="submit" class="btn btn-dark btn-sm mt-2">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+    <div class="shop-now">
+        <button class="shop-button">SHOP NOW →</button>
+    </div>
+
+    <%- include('../partials/promo_boxes.ejs') %>
+
+<div class="instagram-section container py-5">
+  <h2 class="text-center mb-4">INSTAGRAM</h2>
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-0">
+    <% for(let i = 0; i < 15; i++) { %> <!-- Adjust number as needed -->
+      <div class="col">
+        <div class="insta-post position-relative overflow-hidden">
+          <img src="/imgs/low_resolution.avif" class="img-fluid" alt="Instagram post">
+          <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+            <a href="https://www.instagram.com/percival_menswear/" 
+               class="text-white text-decoration-none" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <i class="fab fa-instagram fa-3x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</div>

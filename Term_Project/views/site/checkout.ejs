@@ -1,0 +1,88 @@
+<div class="container py-5 pb-4">
+  <h2 class="mb-4">Checkout</h2>
+
+  <div class="order-summary mb-5">
+    <h5>Order Summary</h5>
+
+    <% items.forEach(item => { %>
+    <div
+      class="cart-item-box"
+      style="
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      "
+    >
+      <h6><%= item.title %></h6>
+      <p>Price: Rs. <%= item.price %></p>
+      <p>Quantity: <%= item.quantity %></p>
+      <p>Subtotal: Rs. <%= (item.price * item.quantity).toLocaleString() %></p>
+    </div>
+    <% }) %>
+
+    <h4>Total: Rs. <%= total.toLocaleString() %></h4>
+  </div>
+
+  <div class="signup-section">
+    <h6>Payment Information</h6>
+    <form method="POST" action="/checkout" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fullName"
+          name="fullName"
+          required
+        />
+        <div class="invalid-feedback">Please enter your full name.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          required
+        />
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input
+          type="tel"
+          class="form-control"
+          id="phone"
+          name="phone"
+          pattern="\d{10,15}"
+          minlength="10"
+          maxlength="15"
+          required
+        />
+        <div class="invalid-feedback">
+          Enter a valid phone number (10-15 digits).
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea
+          class="form-control"
+          id="address"
+          name="address"
+          rows="3"
+          required
+          minlength="10"
+        ></textarea>
+        <div class="invalid-feedback">Please enter a valid address.</div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Pay Later with Cash</button>
+    </form>
+
+  </div>
+</div>
