@@ -1,0 +1,59 @@
+<div class="container py-5">
+  <h1 class="mb-4 text-center fw-bold">Admin Dashboard</h1>
+
+  <div class="row g-4 mb-5">
+    <!-- Orders Card -->
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 text-white bg-primary">
+        <div class="card-body">
+          <h5 class="card-title">Total Orders</h5>
+          <p class="card-text fs-4">143</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Card -->
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 text-white bg-success">
+        <div class="card-body">
+          <h5 class="card-title">Products</h5>
+          <p class="card-text fs-4">58</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Users Card -->
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 text-white bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Users</h5>
+          <p class="card-text fs-4">27</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Quick Actions -->
+  <div class="row g-4">
+    <div class="col-md-3">
+      <a href="/admin/products/add" class="btn btn-outline-primary w-100 py-3">
+        <i class="fas fa-plus me-2"></i> Add Product
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="/admin/products/list" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-boxes me-2"></i> Manage Products
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="/admin/orders" class="btn btn-outline-warning w-100 py-3">
+        <i class="fas fa-clipboard-list me-2"></i> View Orders
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="/" class="btn btn-outline-secondary w-100 py-3">
+        <i class="fas fa-home me-2"></i> Back to Site
+      </a>
+    </div>
+  </div>
+</div>
